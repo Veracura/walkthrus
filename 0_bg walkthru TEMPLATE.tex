@@ -1,0 +1,86 @@
+\documentclass[10pt,a4,twoside]{book}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+%%%%%%%%%%
+%PREAMBLE
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{multicol} % for multiple columns obviously
+\usepackage{varioref} % \vref{name} ie 5 on page 25/on the next page/ on the facing page
+\usepackage{hyperref} % \autoref{cod:name} and \label{cod:name} becomes section 3.4 
+% +* unliked prefix, 
+% can ignore predefined text...?
+% Anchor manual positioning: \phantomsection \label{name}
+\usepackage{cleveref} % also sorts references into ranges \cref{} \labelcref{} \cpageref{} \crefrange{}{} \cpagerefrange{}{} 
+\usepackage{showkeys} % comment out for final: simply shows labels (etc?)
+%\setlength{\oddsidemargin}{0in}
+%\setlength{\evensidemargin}{0in}
+%\setlength{\textwidth}{6.3in}
+
+\setlength{\topmargin}{0cm}
+\setlength{\headheight}{0cm}
+\setlength{\headsep}{0cm}
+\setlength{\footskip}{0cm}
+\setlength{\textheight}{9.5in}
+\setlength{\oddsidemargin}{0in}
+\setlength{\evensidemargin}{0in}
+\setlength{\textwidth}{7in}
+%%%%%%%%%%
+%Version History:
+
+% Where I'm At:
+% check all this works! 
+% already had an issue ending a titlepage with multicols and such bc apparently they don't nest well?
+
+%  copiables at the bottom should be nicened
+%   NEWCOMMANDS: label + pageref: superscript? 
+%   not pageref.
+%   check margin settings with A4 paper, including printing it (might have to go back to letterpaper)
+
+% Upcoming Features:
+
+% Additional Files to make:
+
+% Niceness:
+
+%%%%%%%%%%
+%COMMENTS
+%%%%%%%%%%
+\begin{document}
+%%%%%%%%%%
+%TITLEPAGE
+\begin{titlepage}
+\begin{center}
+{\Huge Baldur's Gate Walkthru}
+\end{center}
+%\newpage
+%%%%%%%%%%
+%CONTENTS
+%%%%%%%%%%
+\begin{multicols}{3} %maybe even 4 %hyperref the list?
+\begin{titlepage}
+\begin{trivlist}
+ \item 
+\end{trivlist}
+\end{titlepage}
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%
+\paragraph*{}
+\begin{trivlist}
+ \item 
+\end{trivlist}
+%%%%%%%%%%%%%%%%%%%%%%
+% \label{} %\pageref{}
+
+% {\textcolor{OliveGreen}{+1}
+% {\superscript{\textcolor{OliveGreen}{+1}}}
+% {\superscript{\parbox{\textcolor{OliveGreen}{+#}}}}
+% {\textcolor{Mahogany}{-#}}
+% {\superscript{\textcolor{Mahogany}{-#}}}
+% {\superscript{\parbox{\textcolor{Mahogany}{-#}}}}
+% {\textcolor{MidnightBlue}{-0}}
+% {\superscript{\textcolor{MidnightBlue}{-0}}}
+% {\superscript{\parbox{\textcolor{MidnightBlue}{-0}}}}
+\end{multicols}
+\end{document}

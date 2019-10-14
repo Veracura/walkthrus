@@ -1,0 +1,125 @@
+\documentclass[10pt,a4,twoside]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+%%%%%%%%%%
+%PREAMBLE
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{multicol} % for multiple columns obviously
+\usepackage{varioref} % \vref{name} ie 5 on page 25/on the next page/ on the facing page
+\usepackage{hyperref} % \autoref{cod:name} and \label{cod:name} becomes section 3.4 
+% +* unliked prefix, 
+% can ignore predefined text...?
+% Anchor manual positioning: \phantomsection \label{name}
+\usepackage{cleveref} % also sorts references into ranges \cref{} \labelcref{} \cpageref{} \crefrange{}{} \cpagerefrange{}{} 
+\usepackage{showkeys} % comment out for final: simply shows labels (etc?)
+%\setlength{\oddsidemargin}{0in}
+%\setlength{\evensidemargin}{0in}
+%\setlength{\textwidth}{6.3in}
+
+\setlength{\topmargin}{0cm}
+\setlength{\headheight}{0cm}
+\setlength{\headsep}{0cm}
+\setlength{\footskip}{0cm}
+\setlength{\textheight}{9.5in}
+\setlength{\oddsidemargin}{0in}
+\setlength{\evensidemargin}{0in}
+\setlength{\textwidth}{7in}
+%%%%%%%%%%
+%Version History:
+
+% Where I'm At:
+% check all this works! 
+% already had an issue ending a titlepage with multicols and such bc apparently they don't nest well?
+
+%  copiables at the bottom should be nicened
+%   NEWCOMMANDS: label + pageref: superscript? 
+%   not pageref.
+%   check margin settings with A4 paper, including printing it (might have to go back to letterpaper)
+
+% Upcoming Features:
+
+% Additional Files to make:
+
+% Niceness:
+
+%%%%%%%%%%
+%COMMENTS
+%%%%%%%%%%
+\begin{document}
+%%%%%%%%%%
+%TITLEPAGE
+\begin{titlepage}
+\begin{center}
+{\Huge Baldur's Gate: The Black Pits Walkthru}
+\end{center}
+%\newpage
+%%%%%%%%%%
+%CONTENTS
+%%%%%%%%%%
+%\begin{multicols}{3} %maybe even 4 %hyperref the list?
+%\begin{titlepage}
+%\begin{trivlist}
+% \item 
+%\end{trivlist}
+%\end{titlepage}
+%\newpage
+%%%%%%%%%%%%%%%%%%%%%%
+\section*{Prologue}
+\begin{description}
+ \item [Qualification] diseased gibberlings
+ \item [Baeloth's Geas]
+ \item [Shopping] --- at the beginning of each tier, new shopping will show up
+ \item [Getting to Know People] After every battle, someone will be in the cells in the back, and they have something to say too. You can converse the first time, then just listen. You'll kill them later. \\Also, the beholder in the back will give you helpful hints. 
+\end{description}
+
+\section*{Tier 1}
+\begin{description}
+ \item[Shopping]
+ \item[Plan-B Team]
+ \item[Bad Hobs and Boomsticks]
+ \item[How to Raise the Dead and Influence People]
+ \item[Gauntlet of Ogres]
+ \item[Margarine of Evil]
+ \item[Genie's Gift]
+\end{description}
+
+\section*{Tier 2}
+\begin{description}
+ \item[Shopping]
+ \item[Bugged]
+ \item[Unfriendly Neighborhood Spider Man]
+ \item[Thicket of Thieves]
+ \item[Gift of the Ogre Mage]
+ \item[Red Shirt Wizards]
+ \item[Genie's Gift]
+\end{description}
+
+\section*{Tier 3}
+\begin{description}
+ \item[Shopping]
+ \item[Swamped]
+ \item[A History of Violent Beatings]
+ \item[Ice to See You]
+ \item[Catching Fire]
+ \item[Final Chat!] also your last chance to shop, of course.
+ \item[Final Battle] Baeloth, beholder, rakshasa and duregar
+ \item[Go the Fuck Home] save with all your swag (preferably in the form of swag, although baeloth drops money so hey), and say goodbye, then talk to the genie and you're done!
+\end{description}
+
+\end{titlepage}
+%%%%%%%%%%%%%%%%%%%%%%
+% \label{} %\pageref{}
+
+% {\textcolor{OliveGreen}{+1}
+% {\superscript{\textcolor{OliveGreen}{+1}}}
+% {\superscript{\parbox{\textcolor{OliveGreen}{+#}}}}
+% {\textcolor{Mahogany}{-#}}
+% {\superscript{\textcolor{Mahogany}{-#}}}
+% {\superscript{\parbox{\textcolor{Mahogany}{-#}}}}
+% {\textcolor{MidnightBlue}{-0}}
+% {\superscript{\textcolor{MidnightBlue}{-0}}}
+% {\superscript{\parbox{\textcolor{MidnightBlue}{-0}}}}
+%\end{multicols}
+\end{document}

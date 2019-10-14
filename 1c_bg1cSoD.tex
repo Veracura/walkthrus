@@ -1,0 +1,573 @@
+\documentclass[10pt,a4,twoside]{book}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+%%%%%%%%%%
+%PREAMBLE
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{multicol} % for multiple columns obviously
+\usepackage{varioref} % \vref{name} ie 5 on page 25/on the next page/ on the facing page
+\usepackage{hyperref} % \autoref{cod:name} and \label{cod:name} becomes section 3.4 
+% +* unliked prefix, 
+% can ignore predefined text...?
+% Anchor manual positioning: \phantomsection \label{name}
+\usepackage{cleveref} % also sorts references into ranges \cref{} \labelcref{} \cpageref{} \crefrange{}{} \cpagerefrange{}{} 
+\usepackage{showkeys} % comment out for final: simply shows labels (etc?)
+%\setlength{\oddsidemargin}{0in}
+%\setlength{\evensidemargin}{0in}
+%\setlength{\textwidth}{6.3in}
+
+\setlength{\topmargin}{0cm}
+\setlength{\headheight}{0cm}
+\setlength{\headsep}{0cm}
+\setlength{\footskip}{0cm}
+\setlength{\textheight}{9.5in}
+\setlength{\oddsidemargin}{0in}
+\setlength{\evensidemargin}{0in}
+\setlength{\textwidth}{7in}
+%%%%%%%%%%
+%Version History:
+
+% Where I'm At:
+
+% Upcoming Features:
+%  referencing!
+%  chapters/can't go back places
+%  
+%  
+%  
+
+% Additional Files to make:
+
+% Niceness:
+
+%%%%%%%%%%
+%COMMENTS
+%%%%%%%%%%
+%this one is difficult to do solo, if not impossible, and you get all the exp you need almost before you leave the city if you do and you really try.
+%check and see, bc i'm pretty sure you get no more abilities, but you can probably bring in a whole party of your people, and only separate them at the end, although you won't get quite as much swag...
+%also it's really difficult to manage your reputation in this one so it's unlikely you'll have lots of evil party members. man i wish you could use a cheat for that!
+
+%stealing \textcolor{Mahogany}{R-1}
+%kill a soldier \textcolor{Mahogany}{R-5}
+
+\begin{document} %remove pg num on first page
+%%%%%%%%%%
+%TITLEPAGE
+\begin{titlepage}
+\begin{center}
+{\Huge Baldur's Gate: Siege of Dragonspear Walkthru}
+\end{center}
+%\newpage
+\begin{multicols}{3} %maybe even 4 %hyperref the list?
+
+%\newpage
+\begin{trivlist}
+\item Korlasz Family Tomb
+\item Ducal Palace
+\item Baldur's Gate East
+\item Inside Sorcerous Sundries
+\item Inside Elfsong Tavern
+\item Three Old Kegs
+\item Iron Throne
+\item Flaming Fist
+\item Ducal Palace Revisited
+\item Leaving Baldur's Gate
+\item Coast Way Crossing
+\item Coast Way Forest
+\item Waylaid by Enemies
+\item Troll Claw Woods
+\item Forest of Wyrms
+\item Boarskyr Bridge
+\item Coalition Camp
+\item Bloodbark Grove
+\item Dead Man's Pass
+\item Underground River, Exterior
+\item Underground River, Interior
+\item Kanaglym
+\item Warrens
+\item Thying Things Up Here
+\item Dragonspear Basement
+\item Dragonspear Castle, Exterior
+\item Coalition Camp Revisited
+\item The Parley, Camp Under Siege
+\item Assault Dragonspear Castle
+\item Avernus
+\item Basalt Tower
+\item Dragonspear Basement
+\item Hearing the Evidence
+\item The Escape (Imoen)
+\item The Escape (Belt)
+\end{trivlist}
+\hrulefill
+\\Available Allies:
+\begin{trivlist}
+\item Minsc + Dynaheir (3 old kegs BG)
+\item Safana (Elfsong BG/ leaving BG)
+\item Viconia (leaving BG)
+\item Corwin (Coast Way Crossing)
+\item Glint (Coast Way Crossing)
+\item Edwin (Coast Way Crossing)
+\item Baeloth (Coast Way Crossing)
+\item M'Khinn (Coast Way Crossing)
+\item Rashaad (Coast Way Forest)
+\item Jaheira (Troll Claw Woods)
+\item Voghlin (Troll Claw Woods)
+\item Dorn (Boarskyr Bridge)
+\item Neera (Boarskyr Bridge)
+
+%% here goes list of best equips?
+%%list of rep modifiers
+
+\end{trivlist}
+\end{multicols}
+\end{titlepage}
+\begin{multicols}{3}
+\newpage
+\paragraph*{Korlasz Family Tomb}
+\begin{trivlist}
+\item key ring
+\item Poiros
+\item Gem Bag!
+\item Ammon's Cobalt Moss
+\item Arrest Poiros
+\item Fanegonorom's Peace
+
+\item The Shattered Staff, pt 1
+\item burned out torch %??
+\item Korlasz
+%\item a potion of perception for neera
+
+\item Cobalt Moss pt 2
+
+\item Arrest Korlasz/Fanegonorom pt 2
+\item Shattered Staff pt 2
+\end{trivlist}
+%\hrulefill
+
+\paragraph*{Ducal Palace}
+\begin{trivlist}
+\item Assassins!
+
+\item Skie's Insider Info
+\item Jospil's Plight
+\item Eltan, Endar
+
+\item Korlasz's Wrath
+\item Doppelganger's Treasure %Iron throne basement
+\item Ophyllus' Promise %pt 2 when? also 3 old kegs
+
+\item Corwin and Leave
+
+\item Teera's Errand %BG: E
+\item Garachen and Perren %Elfsong
+\end{trivlist}
+
+\paragraph*{Baldur's Gate East}
+\begin{trivlist}
+\item Teera's Errand pt 2 % lady senna BG ducal
+\item Zelma, thief
+\item Officar Vida's Reinforcements %FF HQ
+\end{trivlist}
+
+\paragraph*{Sorcerous Sundries}
+\begin{trivlist}
+\item Halbrazzer's Gopher
+\item Halbrazzer's Thieves %can get reward without them spawning actually % don't forget to loot the cabinet while you have the key
+\item Kazzrem's Scroll case
+\end{trivlist}
+
+\paragraph*{Elfsong Tavern}
+\begin{trivlist}
+\item Garrick and Ayleth
+\item Garachen's Supplies pt 2 %Ducal ext.
+\item Zaviak's Spectacles
+\item Irina's Ruby Wine %ducal %glitch: don't enchant!
+
+\item \emph{Safana} and Coran
+\end{trivlist}
+
+\paragraph*{Three Old Kegs}
+\begin{trivlist}
+\item Robel's Drink
+\item 4 `adventurers'
+\item Aileen's husband
+%1st floor
+\item Robel's pt 2 %katheera
+\item Nantrin, peacemaker \textcolor{OliveGreen}{(R+1)}
+\item 3 Nobles' Plot, pt 2 \textcolor{Mahogany}{R-1}
+%2nd floor
+\item Berahli and your money %berahli's banquet
+%3rd floor
+\item 3 Nobles' Plot
+\item \emph{Minsc, Dynaheir, and Boo!}
+\end{trivlist}
+
+\paragraph*{Iron Throne}
+\begin{trivlist}
+\item Byzon's Bully, Riggs
+%interior
+\item Rasaad
+\item Berta's Holy Symbol
+%basement
+\item Doppelganger's Treasure pt 2 % see ducal basement
+\end{trivlist}
+
+\paragraph*{Flaming Fist}
+\begin{trivlist}
+\item Nobles Misbehaving
+\item Officer and the Drunken Lord
+% interior
+\item Tiax
+\item Vida's Reinforcements pt 2 % BG: E
+\item Garachen's Crimes pt 2 %BG N %alt pt 2 at Elfsong
+\end{trivlist}
+
+\paragraph*{Elfsong Tavern}
+\begin{trivlist}
+\item Garrick and Ayleth
+\item Garachen's Supplies pt 2 %BG: ducal
+\item Zaviak's Spectacles
+\item Irina's Ruby Wine %glitch: don't enchant it. it'll freeze the game.
+\item \textit{Safana} and Coran
+\end{trivlist}
+
+\paragraph*{Ducal Palace Revisited}
+\begin{trivlist}
+\item Irina's Ruby Wine pt 2 %Elfsong
+
+\item Captain Corwin
+
+\item Imoen and The Hooded Man
+%rest
+\item Skie's Plans
+%rest
+
+\item Entar \\%No access to the city any more!
+\end{trivlist}
+%\hrulefill
+\paragraph*{Leaving Baldur's Gate}
+\begin{trivlist}
+\item Belgram's Wares
+\item \emph{Viconia} and friends 
+\item \emph{Safana}
+\item \emph{Minsc and Dynaheir} %anyone else?
+
+\item Parting Words
+\end{trivlist}
+%\hrulefill
+
+\paragraph*{Coast Way Crossing} % Belegarm is still here. some companions will also follow.
+\begin{trivlist}
+\item \emph{Corwin}
+\item \emph{Glint}
+\item \emph{Edwin} % not with minsc and dynaheir
+\item \emph{Baeloth} % not with M'khinn
+\item \emph{M'khinn} % not with Baeloth
+\item Prinn's Stones
+\item Herod's Missing Persons \textcolor{OliveGreen}{R+1}
+\item Takos' mirror, cloak, and shield % Scavenger Hunt % ?see mirror, cloak, shield
+\item Darin Highhammer and the Dig %breakdown?
+\item COAST WAY FOREST \\
+
+%\hrulefill
+\item Crusade Guardpost
+\end{trivlist}
+
+\paragraph*{Coast Way Forest}
+\begin{trivlist}
+\item \textit{Rasaad}
+\item Skye and the Poisoner
+\item Vampire Hunting
+\item Orcs in Leather
+\end{trivlist}
+%and around here is some kind of justification yuckiness...
+\paragraph*{Waylaid by Enemies}
+\begin{trivlist}
+\item Orcs and Trolls
+\item Dragon and Giants
+\item The Pit
+\item Dead Magic Pass
+\end{trivlist}
+%\hrulefill
+\paragraph*{Troll Claw Woods}
+\begin{trivlist}
+\item \emph{same people?}
+\item \emph{Jaheira}
+\item \emph{Voghlin}
+\item Cave (tinderbox)
+\item Irregulars and Lt Otilda %Boarskyr Bridge
+\item Refugees
+\item Bence and Skye
+%\item orcs
+%\item ogres
+%\item bandits
+%\item trolls
+%\item hobgoblin scouts
+%\item more trolls
+\end{trivlist}
+
+\paragraph*{Forest of Wyrms}
+\begin{trivlist}
+\item Adventurer's corpse
+%\item Coogan's warning
+%\item  Wyverns and displacer beasts
+\item Spider Cave %how much do i need all the webs and spider legs and eggs?
+%\item Bugbears
+\item Lost temple
+%maybe break it down
+\item Dragon
+\item Free the Prisoners
+\item Ziathar, half-dragon
+\item Neothelid
+\item Akanna, High Priestess
+\item Illithid
+\item Mask puzzle (3,1,4)
+\item Shadow Aspect
+\end{trivlist}
+
+\paragraph*{Boarskyr Bridge}
+\begin{trivlist}
+\item \emph{Dorn}
+\item Goblin Stash Cave
+%\item Barghest
+\item Ask for Kharm %free the prisoners, forest of wyrms
+\item Kava's Ale %Coast way crossing
+\item Hormon, Dorn's target
+%\item Olonieros
+%\item Delgar Munsch
+\item Vichand's scroll pt 2
+\item planetar feather %neera's list, coalition camp
+\item Kava's Ale %see Irregulars, Troll Claw Woods
+
+\item Khalid
+\item Jegg's crafting %dragon scales, shards, ??
+\item \emph{Neera}
+\item Hoach Randymonk, Cobbler
+%\item Friar Tajik
+\item Wynan Hess and the Stone
+\item Junia's Graverobbing
+\item ``The Fear''
+
+
+\item Khalid's Battle Plans
+\item The Bridge
+\item Skie and Bence
+\item Khalid's Romantic Gesture %spider silk
+\item Cutscene: Crossing the Bridge
+\item Wishing Well
+\item Kava's Ale, final
+\end{trivlist}
+
+\paragraph*{Coalition Camp}
+\begin{trivlist}
+\item Marshal Nederlok's Briefing
+\item Helvdor's Lucky Charm %dead man's pass
+\item Waizahb's Wares
+\item Vigilant Halasaan's Men
+\item Simonetta Twoedge's Lesson %dosia, halasan, belegarm
+\item Jegg's Tinkering (con't)
+\item Dosia's Cure
+\item Healing Hyreth
+\item The Counsel Meeting
+\item Barrel and Phial
+\item Skye Runs Away
+\item Spy in Camp \textcolor{OliveGreen}{(R+1)}%safana; bottle: belegarm, helvdar; candle: Mizhena; page: halasaan, twoedge. Arrest Col, inform Nederlok
+\item General Stonehand and the Guild
+\item Wilhelmina's Turnip Juice
+\item Neera's List %belladonna (bloodbark grove), feather (boarskyr bridge), spider leg (Forest of Wyrms), turnip juice (coalition camp), potion of perception
+\end{trivlist}
+
+\paragraph*{Bloodbark Grove}
+\begin{trivlist}
+\item The Druid or the Tree %Dosia's cure, coalition camp
+\item Basilisk for Onoroth
+\item Vampire
+\item Dushwick and Chalmers
+\item Belladonna for Neera %coalition camp
+\end{trivlist}
+
+\paragraph*{Dead Man's Pass}
+\begin{trivlist}
+\item Saved from Wolves \textcolor{OliveGreen}{R+1}
+\item Nuber
+\item spider silk again
+\item Ephrik
+\item Helvdor's Lucky Charm pt 2 %coalition camp
+\item loot a tree
+\item loot a corpse
+\item loot a cave
+\item loot another corpse
+\item loot a cellar
+\item Gnader and Kambolder
+\item Horst and Stalia's Store
+\end{trivlist}
+% coalition camp revisited: neera's stuff, boots for helvedor (1 day wait so go get skye at dragonspear)
+
+
+\paragraph*{Underground River, Exterior}
+\begin{trivlist}
+\item Druid Wars
+\item Myconoid Stash
+\item Goblin Raiders (talk)
+\item loot body
+\item loot rock
+\item Ogres' Arguments
+\item Crusade Guard Post
+\item Miznhena's amulet pt 2 %coalition camp
+\item Righa, Julann and Rashemi %minsc and dynaheir
+\end{trivlist}
+
+\paragraph*{Underground River, Interior}
+\begin{trivlist}
+\item Ladle's Crates
+\item Druid Wars pt 2
+\item Kaelet and Umar
+\item Crusaders' Cure % see Ferrusk, Druid Wars pt 2
+\item Halatathlar's Guard Duty
+\item Hooded Man (DeLancie)
+\item Gurgle and Floss (story)
+\item Bellowgulp Bluefingers
+\item Albino Wyrmlings
+\item Drow Party (peace) % viconia
+\item Woris and Litla (calm)
+\item Free the Nereid
+\item 3 crusaders' Story
+\item Dead Ettin's Club
+\item Turin Brassbreaker
+\item Placing the Barrel
+\end{trivlist}
+
+\paragraph*{Kanaglym}
+\begin{trivlist}
+\item Sacrifices
+\item Dragon's Message
+\item Fugue Plane % Woris and Litla
+\end{trivlist}
+
+
+\paragraph*{Warrens}
+\begin{trivlist}
+\item Polvi
+\item Rhonda's Escape
+\item Free the Ogres
+\end{trivlist}
+
+\paragraph*{Tying Things Up Here}
+\begin{trivlist}
+\item Ogre Stash (underground river)
+\item Kaelet and Umar
+\item Ogre camp 
+\item Druid Wars
+\item Julanne and Rigah %minsc and dynaheir only?
+\end{trivlist}
+
+\paragraph*{Dragonspear Basement}
+\begin{trivlist}
+\item Finally Found Out
+\item Poison the Water % optional
+\item Bjarn Littleclub
+\item Hephernaan pt 1
+\item Free Daeros % Kanaglym: dragon's message
+\end{trivlist}
+
+\paragraph*{Dragonspear Castle, Exterior}
+\begin{trivlist}
+\item Saving Skye %make sure to do this early enough to report back to Nederlok
+\item Friend or Foe?
+\item Questioning Corinoth
+\item Kjarvan and Qing's Holy Symbol %coalition camp
+\item Sallo, Nan and Pedro
+\item Deneld's Morning Report
+\item Dreon's Deliveries
+\item Waizahb's Ring
+\item Waizahb's Standard
+\item Waizahb's Symbol (Tristan)
+\item Waizahb's Map
+\item Waizahb's Token
+\item Sindret, Drow Hunter
+\item Ring of the Crusade
+\end{trivlist}
+
+\paragraph*{Coalition Camp Revisited}
+\begin{trivlist}
+\item Blessing the Holy Symbol %dragonspear castle
+\item Waizahb's Items
+\item Dead Man's Parley
+\item Mizhena's Board
+\end{trivlist}
+
+%\paragraph*{Return to the Basement} % just to clear it out? do that while you're there
+\paragraph*{The Parley}
+\paragraph*{Camp Under Siege}
+\begin{trivlist}
+\item Bence Duncan
+\item Andrus
+\item Defend the Camp %(archers, wiz slayers, dwarves, final push)
+\item Ophyllis' Debt 
+\end{trivlist}
+
+\paragraph*{Assault Dragonspear Castle}
+\begin{trivlist}
+\item Torsin and the Bwoosh!
+\item Adras Ashatiel's Challenge
+\item Caelar and the Gate
+\item Inner Keep: Torsin
+\item Dosia's healing services
+\item First Floor: Belegarm
+\item Basement: Bence and the Doors
+\item Caelar Betrayed
+\end{trivlist}
+%%% gotta find a way to do floors of the same area more nicely. probably 1st in bold and then a colon...
+\paragraph*{Into Avernus}
+\begin{trivlist}
+\item Rescue Stupid Crusaders
+\item Spectacles: Idyletia
+\item Thrix's Wager (murder, sword)
+\end{trivlist}
+
+
+\paragraph*{Into the Basalt Tower}
+\begin{trivlist}
+\item Spectacles: Xhost (peace, sword)
+\item Fights on the Lift (prep!)
+\item Caelar, Hephernaan, and Belhifet
+\item Caelar's Stupid Uncle
+\end{trivlist}
+
+\paragraph*{Dragonspear Basement}
+\begin{trivlist}
+\item Darnas, Torsin
+\item Rest and Export!
+\item Dazzo
+\item Dream of Murder
+\item Caught Red-Handed
+\end{trivlist}
+
+\paragraph*{Hearing the Evidence}
+\begin{trivlist}
+\item Belt's Questions
+\item Entar's Wrath
+\item No more stuff!
+\item Corwin Visits
+\item lover/viconia visits %may not happen if you don't have any of them in your party
+\item Hooded Man and the Truth
+\item \textit{auto-rest}
+\item Imoen's Friend or Belt
+\end{trivlist}
+
+\paragraph*{The Escape (Imoen)}
+\begin{trivlist}
+\item key and cache pt 1
+\item key and cache pt 2
+\item the Long Jump Home
+\item Imoen
+\item More party members
+\item FINAL GAMESAVE AND EXPORT
+\item The Ambush\ldots
+\end{trivlist}
+And now for Baldur's Gate 2: Shadows of Amn!
+%%%END OF LINE%%%
+\end{multicols}
+\end{document}

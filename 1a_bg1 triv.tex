@@ -1,0 +1,840 @@
+\documentclass[10pt,a4,twoside]{book}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+%%%%%%%%%%
+%PREAMBLE
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{multicol}
+\usepackage{varioref}
+\usepackage{hyperref}
+\usepackage{cleveref}
+%\usepackage{showkeys}
+\setlength{\oddsidemargin}{0in}
+\setlength{\evensidemargin}{0in}
+\setlength{\textwidth}{6.3in}
+%%%%%%%%%%
+% Where I'm At: 
+%  All the easy references have been added, 
+%   but the actual references are commented out for now, 
+%    pending better formatting (hopefully to the paragraph) 
+%    and possible hyperlinking
+%  More complex quests still need references, 
+%   pending some kind of system to apply it
+
+% Upcoming Features:
+%  Character Quests!
+% Chapters (and Abilities), also can't go back points (less important)
+%  Denote what's Tales of the Sword Coast vs vanilla (also exploits when the time comes)
+%  Better Reputation notes?
+
+%  Begin taking external notes for exploits (much later, which exploits work for which versions: Steam, EE, Original)
+
+%  NPC Info: another doc
+%  Best Equips: external doc
+
+% Niceness:
+
+%%%%%%%%%%
+%COMMENTS
+
+%Find occurences of references and make them stand out (or disappear for now)
+  %\pageref
+%eventually maybe use superscript
+%also perhaps if I can manage, paragraph numbers, if that isn't horribly cluttery!
+
+%try to regularize multi-floor paragraphs' labelling
+
+%continue to eliminate margins where possible, also cut down on white space between items in trivlists.
+%OK pageref has got it. still doesn't ref section etc... vref is getting output ?? on page 2. 
+%if possible. even better if it can do paragraph # item #, but that's very unlikely.
+
+%may come back and do a real TOC for hyperref purposes.
+%link to the exploits in the back of the book, label exploits by letter(s)
+%may also re-add charts and tables, even basic faq info
+%may swap to slightly bulkier description environments, poss including more detailed info than just kill|talk|etc
+  %also may involve more about locations and/or rewards. idk.
+%will need better character generation info, that's not in Dsimpson's faq for some reason.
+
+%h=help t=talk k=kill l=loot p=pickpocket nrl=no rep loss (assumed as part of the (mostly) absolute decision to kill. ##### conversation to desired end.
+
+%%%%%%%%%%
+
+\begin{document} %remove pg num on first page
+
+%%%%%%%%%%
+%TITLEPAGE
+\begin{center}
+{\Huge Baldur's Gate Walkthru}
+\end{center}
+%\newpage
+%%%%%%%%%%
+
+%%%%%%%%%%
+%CONTENTS
+
+%check for correctness
+\begin{multicols}{3} %maybe even 4 %hyperref the list?
+\begin{titlepage}
+\begin{trivlist}
+\item Candlekeep
+\item E of Candlekeep
+\item S of Friendly Arm
+\item Friendly Arm Inn
+\item Beregost
+\item High Hedge
+\item SW of Beregost
+\item S-SW of Beregost
+\item S of Beregost
+\item N of Nashkel
+\item Temple
+\item Nashkel
+\item Carnival
+\item W of Nashkel
+\item N of Gnollish Stronghold
+\item Gnollish Stronghold
+\item SW of Nashkel
+\item S of Nashkel
+\item Nashkel Mines
+\item NE of Nashkel Mines
+\item E of Nashkel Mines
+\item E of Temple
+\item Ulcaster (S of Temple)
+\item S of Ulcaster
+\item N of Friendly Arms
+\item Larswood
+\item Peldvale
+\item Bandit Camp
+\item E of Larswood
+\item W of High Hedge
+\item Lighthouse
+\item S of Lighthouse
+\item Cloakwood Forest 1
+\item Cloakwood Forest 2
+\item Cloakwood Forest 3
+\item Cloakwood Forest 4
+\item Cloakwood Mines
+\item Gullykin
+\item Firewine Bridge
+\item Firewine Ruins
+\item Baldur's Gate Bridge
+\item N of Baldur's Gate Bridge
+\item Baldur's Gate E
+\item Baldur's Gate NE
+\item Baldur's Gate SE
+\item Baldur's Gate S (The Harbor)
+\item Baldur's Gate SW
+\item Baldur's Gate Central
+\item Baldur's Gate W
+\item Baldur's Gate NW
+\item Baldur's Gate N
+\item Baldur's Gate Sewers
+\item Candlekeep Revisited
+\item Candlekeep Catacombs 
+%\item Ducal Palace
+\item Ulgoth's Beard
+\item Durlag's Tower
+\item Werewolf Island, Village
+\item Werewold Island, Wilds
+\item Werewolf Island, Shipwreck
+\item Werewolf Island, Escape
+\item Ulgoth's Beard Revisited
+\item Baldur's Gate Revisited
+\item Undercity
+\end{trivlist}
+
+\hrulefill
+\\
+%newcolumn
+\begin{trivlist}
+\item Flood the Mines \textcolor{OliveGreen}{R+2}
+\item Seven Suns\textcolor{OliveGreen}{R+2}
+
+\item Firebead's book \textcolor{OliveGreen}{R+1}
+\item Bjornin's Half-Ogres \textcolor{OliveGreen}{R+1}
+\item Officer Vai:Bandit Scalps \textcolor{OliveGreen}{R+1}
+\item Melicamp the Chicken \textcolor{OliveGreen}{R+1}
+\item Berrun Ghastkill \textcolor{OliveGreen}{R+1}
+\item Oublek \textcolor{OliveGreen}{R+1}
+\item Dryad \& the Oak \textcolor{OliveGreen}{R+1}
+\item Drienne's Cat \textcolor{OliveGreen}{R+1}
+\item Prism, Oublek, Greywolf \textcolor{OliveGreen}{R+1}
+\item Lena and Samuel \textcolor{OliveGreen}{R+1}
+\item Tamah \textcolor{OliveGreen}{R+1}
+\item Hulrik, Xvarts and Cows \textcolor{OliveGreen}{R+1}
+\item Farmer Brun's Son \textcolor{OliveGreen}{R+1}
+\item Ardrouine's Lost Boy \textcolor{OliveGreen}{R+1}
+\item Archaeological Dig, Evil Idol \textcolor{OliveGreen}{R+1}
+\item Insane Captain Brage \textcolor{OliveGreen}{R+1}
+\item Brielbara, Yago's Book \textcolor{OliveGreen}{R+1}
+\item Ghorak the Diseased \textcolor{OliveGreen}{R+1}  
+\item Noralee's Gauntlets \textcolor{OliveGreen}{R+1}
+\item Fergus' Angel Skin Ring \textcolor{OliveGreen}{R+1}
+\item Nadine's Son \textcolor{OliveGreen}{R+1}
+\end{trivlist}
+%-0
+%\begin{trivlist}
+%\item Zhurlong's Boots
+%\item flaming fist
+%\item Vitiare the Thief
+%\item Borda (everything cursed)
+%\item Furret's Gem
+%\end{trivlist}
+-2
+\begin{trivlist}
+\item stealing \textcolor{Mahogany}{R-1}
+\item Viconia \textcolor{Mahogany}{R-2}
+\item Winski Perorate \textcolor{Mahogany}{R-2}
+\item Drizzt Do'Urden  \textcolor{Mahogany}{R-5}
+\item kill a soldier  \textcolor{Mahogany}{R-5}
+\item Shandalar's Quest  \textcolor{Mahogany}{R-7}
+\item Phandalyn  \textcolor{Mahogany}{R-??}
+\end{trivlist}
+
+%Total:\\+25\\-(16+?)
+
+%list of possible NPCs
+%list of best equips and related builds
+
+\end{titlepage}
+\newpage
+%%%%%%%%%%
+
+\paragraph*{Candlekeep}
+\begin{trivlist}
+\item assassin (x2961, y437) 
+\item assassin (x2055 y2668)
+\item buy equipment/fuller's bolts
+\item phlydia's book
+\item firebead's scroll [E] %exploit: \textcolor{Mahogany}{R-?}
+\item fuller's bolts
+\item hull's sword/nessie's meds
+\item nessie's meds
+\item reevor's rat exterminator
+\item star sapphire and spells [E] %needs exceptional lockpick
+\item learn to fight [E] [E]
+\item learn to fight some more
+\item free healing potion
+\end{trivlist}
+
+\paragraph*{E of Candlekeep}
+\begin{trivlist}
+\item search gorion's body
+%\item chase and the cliff
+\item diamond (x4418 y1956)
+\end{trivlist}
+
+\paragraph*{S of Friendly Arm}
+\begin{trivlist}
+\item ogre and his belts  \label{unshey} %\pageref{belt}
+\item downed caravan
+\item ring of prot. +1 (x1006, y1114)
+%\item Elminster
+\end{trivlist}
+
+\paragraph*{Friendly Arm Inn}
+\begin{trivlist}
+\item unshey's belt  \label{belt} %\pageref{unshey}
+\item golden pantaloons  \label{pants} %\pageref{shade}
+\item landrin's spiders pt 1  \label{landrin} %\pageref{spiders}
+\item joia's flamedance ring
+\item ring of wizardry (x2555, y3759)
+\item Lena and Samuel pt 2   \label{gellana} %\pageref{samuel}
+\end{trivlist}
+
+\paragraph*{Beregost}
+\begin{trivlist}
+\item assassin (red sheaf inn)
+\item mirianne's letter pt 1   \label{mirianne} %\pageref{letter}
+\item firebead's book (house S){\textcolor{OliveGreen}{R+1}}
+\item marl the drunk (11331)[t+k] %\textcolor{MidnightBlue}{R-0} 
+\item kagain's quest
+\item landrin's spiders pt 2  \label{spiders} %\pageref{landrin}
+\item gurke's cloak [c]   \label{gurke} %\pageref{gcloak}
+\item bjornin's half-ogres pt 1 {\textcolor{OliveGreen}{R+1}}   \label{bjornin} %\pageref{halfogres}
+\item silke [tip] \textcolor{Mahogany}{R-2}
+\item zhurlong's boots pt 1 \textcolor{MidnightBlue}{R-0}  \label{zhurlong} %\pageref{boots}
+\item perdue's short sword pt 1 (1211)   \label{perdue} %\pageref{shsw}
+\item algernon's cloak [steal]  \label{algernon} %\pageref{acloak}
+\item ankheg armor
+\item officer vai: bandit scalps {\textcolor{OliveGreen}{R+1}}
+\end{trivlist}
+
+\paragraph*{High Hedge}
+\begin{trivlist}
+\item perdue's short sword pt 2   \label{shsw} %\pageref{perdue}
+\item aquamarine gem (x1757 y1526)
+\item melicamp the chicken pt 2   \label{wizard} %\pageref{chicken}
+\end{trivlist}
+
+\paragraph*{SW of Beregost}
+\begin{trivlist}
+\item Melicamp the Chicken pt 1 {\textcolor{OliveGreen}{R+1}}  \label{chicken} %\pageref{wizard}
+\item Dark Cleric Bassilus pt 1   \label{bassilus} %\pageref{temple}
+%\item zargal the hobgoblin
+\end{trivlist}
+
+\paragraph*{S-SW of Beregost}
+\begin{trivlist}
+\item Drizzt Do'Urden \textcolor{Mahogany}{R-~5} {EE}
+\item Teyngan the Bandit
+\item Bjornin's half-ogres pt 2  \label{halfogres} %\pageref{bjornin}
+%\item Cheland and Torlo
+%\item Abandoned House
+\end{trivlist}
+
+\paragraph*{S of Beregost}
+\begin{trivlist}
+\item zhurlong's boots pt2   \label{boots} %\pageref{zhurlong}
+\item mirianne's letter   \label{letter} %\pageref{mirianne}
+%\item submerged house
+%\item bub snikt
+\item flaming fist \textcolor{MidnightBlue}{R-0}
+\item cave (x1800 y2200)
+\end{trivlist}
+
+\paragraph*{N of Nashkel}
+\begin{trivlist}
+\item Hobgoblin camp
+%\item lord foreshadow
+%\item portalbendarwinden
+\end{trivlist}
+
+\paragraph*{Temple}
+\begin{trivlist}
+%\item Town Drunk
+\item Vestibule [1]
+\item Pickpocket the Priest
+%\item Galileus
+%\item Ashen
+\item Cattack the Goblin
+\item Dark Cleric Bassilus pt 2  \label{temple} %\pageref{bassilus}
+\end{trivlist}
+
+\paragraph*{Nashkel}
+\begin{trivlist}
+\item Berrun Ghastkill {\textcolor{OliveGreen}{R+1}}   \label{berrun} %\pageref{mines}
+\item Capt. Brage \label{priest} %\pageref{brage}
+\item Oublek {\textcolor{OliveGreen}{R+1}}   \label{oublek} %\pageref{prism}
+\item joseph's greenstone ring pt1 \label{joseph}  \label{joseph} %\pageref{gring} %must do this before you get the ring
+\item minsc or edwin%see dynaheir
+\item Daer'Ragh [tip]
+\item Volo   \label{volo} %\pageref{zordral}
+\item free ankheg armor (x187, y2742)
+\item winter wolf pelts
+\item noober
+\end{trivlist}
+
+\paragraph*{Carnival}
+\begin{trivlist}
+\item Branwen
+\item Zordral (11)   \label{zordral} %\pageref{volo}
+\item Vitiare the Thief \textcolor{MidnightBlue}{R-0} (k) [tip]
+\item Merchant's two potions
+\item Great Gazib \& Oompah
+\end{trivlist}
+
+\paragraph*{W of Nashkel}
+\begin{trivlist}
+\item Xvart Village
+\item Cave Bear Cave
+\item Borda (everything cursed) \textcolor{MidnightBlue}{R-0}
+\end{trivlist}
+
+\paragraph*{N of Gnollish Stronghold}
+\begin{trivlist}
+\item Neville the Bandit (k)
+\item Jared \& the mountain bear
+\item Eating Ogre (k)
+\item Laurel \& the gibberlings (h)
+\end{trivlist}
+
+\paragraph*{Gnollish Stronghold}
+\begin{trivlist}
+\item Gauntlets of DEX (K)
+\item Tome of CHA (x820, y2375)
+\item Dynaheir
+\end{trivlist}
+
+\paragraph*{SW of Nashkel}
+\begin{trivlist}
+\item Dryad \& the oak {\textcolor{OliveGreen}{R+1}}
+\item Drienne's Cat {\textcolor{OliveGreen}{R+1}}
+\item Ingot the Gnoll
+\item Gnoll Territory
+\item Dire Wolf Cave
+\end{trivlist}
+
+\paragraph*{S of Nashkel}
+\begin{trivlist}
+\item Albert's dog Rufie (k rufie, t Al)
+%\item Larry, Darryl and Darryl
+\item Sendai of Amn (K) %she's pretty tough
+\item Vax and Zal (k)
+\item Blurry Ledge (x1791 y413)
+\end{trivlist}
+
+\paragraph*{Nashkel Mines}  \label{mines} %\pageref{berrun}
+\begin{trivlist}
+\item Prism, Oublek, Greywolf [E]{\textcolor{OliveGreen}{R+1}}  \label{prism} %\pageref{oublek}
+%\item galtok and the kobolds
+\item Wand of Frost (x165 y180)
+%interior, 1st level
+\item Kylee's Dagger pt 1
+%interior, 2nd level
+\item Kylee's Dagger pt 2
+%interior, 3rd level
+\item Joseph's greenstone ring pt 2   \label{gring} %\pageref{joseph}
+%\item huge spider lair
+%interior, 4th level
+\item Xan
+\item Mulahey (clear 1st)
+\item Exits\ldots
+\end{trivlist}
+
+\paragraph*{NE of Nashkel Mines}
+\begin{trivlist}
+\item Hentold and the Stolen Dagger
+\item Narcillus and the Ooze
+\item assassin(x2087 y185)
+\item tombs x 2-3
+\end{trivlist}
+
+\paragraph*{E of Nashkel Mines}
+\begin{trivlist}
+\item Lena and Samuel {\textcolor{OliveGreen}{R+1}}   \label{samuel} %\pageref{gellana}
+\item Hafiz
+\item Flaming Fist
+\item Ring of Fire Resistance (x1955 y2372)
+\end{trivlist}
+
+\paragraph*{E of Temple}
+\begin{trivlist}
+\item Shar-Teel
+\item Tamah {\textcolor{OliveGreen}{R+1}}
+\item Mutamin's Basilisks
+\item Kirian's Adventurers
+\item Korax the Ghoul
+\end{trivlist}
+
+\paragraph*{Ulcaster (S of Temple)}
+\begin{trivlist}
+\item Furret's Gem \textcolor{MidnightBlue}{R-0}
+\item Wraith of Ulcaster
+\item Vampiric Sword
+\item Hobgoblin's Boots of Stealth
+\item Icharyd
+
+\item Ulcaster Temple itself
+\end{trivlist}
+
+\paragraph*{S of Ulcaster}
+\begin{trivlist}
+\item Hulrik, Xvarts and Cows {\textcolor{OliveGreen}{R+1}}
+\item Ioin Gallchobhair
+\item Sarhedra's Ogres
+\item Arghain
+\item Corpse (x4390 y2759)
+\item Ettercap Treasure (x1550 y1300)
+\end{trivlist}
+
+\paragraph*{N of Friendly Arms}
+\begin{trivlist}
+\item Ajantis
+\item Fisherman and Sea Priestess
+\item Farmer Brun's Son {\textcolor{OliveGreen}{R+1}}
+\item Gerde and the Ankhegs
+\end{trivlist}
+
+\paragraph*{Larswood}
+\begin{trivlist}
+\item Osmadi's Mistake
+\item a tower
+\end{trivlist}
+
+\paragraph*{Peldvale}
+\begin{trivlist}
+\item Viconia \textcolor{Mahogany}{R-2}
+\item Palin
+%\item Raiken
+\end{trivlist}
+
+\paragraph*{Bandit Camp}
+\begin{trivlist}
+\item Bandits, Main Quest
+%\item Taugosz Khosann
+%\item treasure everywhere
+\end{trivlist}
+
+\paragraph*{E of Larswood}
+\begin{trivlist}
+\item Fahrington's Scroll
+\item Red Wizards
+\end{trivlist}
+
+\paragraph*{W of High Hedge}
+\begin{trivlist}
+\item Shoal the Nereid
+\item Mad Arcand's Crazy Adventures
+\item The Surgeon
+\end{trivlist}
+
+\paragraph*{Lighthouse}
+\begin{trivlist}
+\item Safana
+\item Ardrouine's Lost Boy {\textcolor{OliveGreen}{R+1}}
+\item Pallonia, Bitterest Seer
+\item Arkushule, Reluctant Seer
+\item Flesh Golem Cave (Manual of Bodily Health)
+\item Cordyr's Sirens pt 2  \label{sirines} %\pageref{cordyr}
+\end{trivlist}
+
+\paragraph*{S of Lighthouse}
+\begin{trivlist}
+\item Archeological Dig, Evil Idol {\textcolor{OliveGreen}{R+1}}
+\item Insane Captain Brage {\textcolor{OliveGreen}{R+1}}  \label{brage} %\pageref{priest}
+\item Bar'uk the Hobgoblin
+\end{trivlist}
+
+\paragraph*{Cloakwood Forest 1}
+\begin{trivlist}
+\item Coran
+\item Gurke's Cloak, pt 2  \label{gcloak} %\pageref{gurke}
+\item Aldeth Sashenstar
+\item Moose Lodge (x 2447 y 1709)
+\end{trivlist}
+
+\paragraph*{Cloakwood Forest 2}
+\begin{trivlist}
+\item Spider's Bane
+\end{trivlist}
+
+\paragraph*{Cloakwood Forest 3}
+\begin{trivlist}
+\item Eldoth, Faldorn
+\item Laskal's Potion
+\item Druid Tree Fort
+\item Izefia and Peter the North
+\item Peter the North's Baby Wyverns
+\end{trivlist}
+
+\paragraph*{Cloakwood Forest 4}
+\begin{trivlist}
+\item Wyvern Cave
+\end{trivlist}
+
+\paragraph*{Cloakwood Mines} %label by floor...?
+\begin{trivlist}
+\item assassination attempt
+\item Lakadaar
+\item Barraks
+\item Storehouse
+% entry level
+\item Flood the Mines {\textcolor{OliveGreen}{R+2}}
+% second level
+\item Yeslick
+\item Free the Slaves
+% third level
+\item Davaeorn
+\item armory
+\item natasha
+% fouth level
+\item stephan
+\end{trivlist}
+
+\paragraph*{Gullykin}
+\begin{trivlist}
+\item Gandolar's Quest
+\item Jankal's Kobolds
+\item assassination attempt
+\item ruins entrance
+%\item other treasures
+\end{trivlist}
+
+\paragraph*{Firewine Bridge}
+\begin{trivlist}
+\item Carsa's Jar
+\item Poet Poe
+\item Melium, Best Swordsman
+\end{trivlist}
+
+\paragraph*{Firewine Ruins}
+\begin{trivlist}
+\item Ancient Armor
+\item Lendarn the Mage
+\end{trivlist}
+
+\paragraph*{Baldur's Gate Bridge}
+\begin{trivlist}
+\item Quayle
+\item Entering Baldur's Gate
+\item Nester's Dagger  \label{dagger} %\pageref{quinn}
+\end{trivlist}
+
+\paragraph*{N of Baldur's Gate Bridge}
+\begin{trivlist}
+\item Wenric and the Zombies
+\item Cloak of Protection
+\end{trivlist}
+
+\paragraph*{Baldur's Gate E}
+\begin{trivlist}
+\item Brevlik's Telescope
+\item Arkion's Corpse
+\item Bizarre Love Triangle
+\item Nilkos and the Bandits TG
+\item Narlen Darkwalk's Thievery Test TG
+\item Four Mages
+\item Husam the Bandit TG
+\item Nymph's Cloak
+\end{trivlist}
+
+\paragraph*{Baldur's Gate NE}
+\begin{trivlist}
+\item Brielbara, Yago's Book of Curses {\textcolor{OliveGreen}{R+1}}  \label{brielbara} %\pageref{yago}
+\item Larze the Would-Be Assassin
+\item Quenash and the Cloak of Balduran
+\item Mustard Jellies
+\item Mr Shade and the Pantaloons  \label{shade} %\pageref{pants}
+\item Lothandar and Marek %lothandar's pt 1
+\item Lothandar's Geas pt %like 5?
+\item Cyrdemac pt 2  \label{cyrdemac} %\pageref{noblewoman}
+\item Narlen's Test pt 2 TG
+\item Mendas' Quest pt 2 %pt 1 in ulgoth's beard, so it's some expansion
+\item Mendas' Quest pt 3 %blushing mermaid
+\end{trivlist}
+
+\paragraph*{Baldur's Gate SE}
+\begin{trivlist}
+\item Nemphre (need male!)
+\item G'Axir the Seer
+\item Nadarin's Basilisk  \label{nadarin} %\pageref{basilisk}
+\item Gantolandan's Rogue Stone TG
+%\item Nikolai
+
+\item Mendas' Quest pt 2 % expansion 1
+\end{trivlist}
+
+\paragraph*{Baldur's Gate S (Harbor)}
+\begin{trivlist}
+\item Iron Throne Tower
+\item Ghorak the Diseased {\textcolor{OliveGreen}{R+1}}  \label{ghorak} %\pageref{skull} \pageref{agnasia}
+\item Nadarin's Basilisk pt 2  \label{basilisk} %\pageref{nadarin}
+\item Noralee's Gauntlets {\textcolor{OliveGreen}{R+1}}
+\item Cordyr's Sirines low-med rep  \label{cordyr} %\pageref{sirines}
+\item Desreta
+\item Nadine's Son  \label{nadine} %\pageref{nson}
+\item Yago's Book of Curses  \label{yago} %\pageref{brielbara}
+\item Larriaz the Sirine
+\item The Child and Umberlee
+\item Ogre Mages
+\end{trivlist}
+
+\paragraph*{Baldur's Gate SW}
+\begin{trivlist}
+\item Tiax
+\item Seven Suns {\textcolor{OliveGreen}{R+2}}
+\item Sewer Cleanup pt 1
+\item Sashenstar Ring %applies even if you have never met a sashenstar! see sewer cleanup
+\item Fergus' Angel Skin Ring {\textcolor{OliveGreen}{R+1}}
+\item Investigate the Iron Throne
+\item Green Slime Tavern
+\item Thieves
+\item Sunin the Mage
+\item Phandalyn \textcolor{Mahogany}{R-?}
+\end{trivlist}
+
+\paragraph*{Baldur's Gate Central}
+\begin{trivlist}
+\item Ragefast's Nymph
+\item Statues of Felonious Gist \textcolor{MidnightBlue}{R-0}
+\item Lothandar's Geas \textcolor{MidnightBlue}{R-0}
+\item Nadine's Son {\textcolor{OliveGreen}{R+1}}  \label{nson} %\pageref{nadine}
+\item Oberan's Estate TG
+\item Rabid Chicken Invasion
+\item Dabron Sashenstar
+\end{trivlist}
+
+\paragraph*{Baldur's Gate W}
+\begin{trivlist}
+\item Alora
+\item Brevlik's Telescope pt 2
+\item The Child and Umberlee pt 2
+\item Ragefast's Nymph pt 2
+\item Ghorak the Diseased pt 3  \label{agnasia} %\pageref{skull} \pageref{ghorak}
+\item Fenten's Ankhegs
+%\item The Lousy Bard
+\end{trivlist}
+
+\paragraph*{Baldur's Gate NW}
+\begin{trivlist}
+\item Skie
+\item Degrodel and the Helm of Balduran
+\item Quinn and Nester's Dagger {\textcolor{OliveGreen}{R+1}}  \label{quinn} %\pageref{dagger}
+\item Twins' Boogeyman
+\item Algernon's Cloak, pt 2   \label{acloak} %\pageref{algernon} %rep ??+
+\item The Maulers and Gorpel Hind
+\end{trivlist}
+
+\paragraph*{Baldur's Gate N}
+\begin{trivlist}
+\item Petrine's Cat Angel
+\item Rinne's Book
+\item The Nymph pt 3
+\item The Noblewoman and Cyrdemac {\textcolor{Mahogany}{(R-1)}}   \label{noblewoman} %\pageref{cyrdemac} %every 2 days $$$, but rep loss 
+\item Jardak's House
+\item Ghorak the Diseased pt 2 \label{skull} %\pageref{ghorak} \pageref{agnasia}
+\end{trivlist}
+
+\paragraph*{Baldur's Gate Sewers}
+\begin{trivlist}
+\item Arkion's Corpse pt 2
+\item Ogre Mage
+\item Sashenstar Ring
+\item Schlumpsha, Sewer King
+\item Ratchild the Kobold
+\end{trivlist}
+
+\paragraph*{Candlekeep Revisited}%label by level...?
+\begin{trivlist}
+\item Priest and cat
+%\item Parda
+\item Cadderly
+\item Star Sapphire %in case you didn't get it before
+
+
+%Candlekeep central keep
+%first floor
+\item Karan
+%second floor
+\item Koveras
+\item Chanter
+%third floor
+\item Iron Throne Leaders
+%fourth floor
+\item Shistal the Doppelganger
+%fifth floor
+\item Gorion's Room
+%sixth floor
+\item Get Arrested
+\end{trivlist}
+
+\paragraph*{Candlekeep Catacombs}
+\begin{trivlist}
+\item Tome of WIS +1
+\item Manual of STR +1
+%\item warhammer +1
+%\item wand of fire
+\item Ring of Fire Resistance
+
+%\item basilisks
+\item Prat and crew
+\item Diarmid's knowledge
+\end{trivlist}
+
+%\paragraph*{Ducal Palace}
+%\begin{trivlist}
+
+%\end{trivlist}
+
+\paragraph*{Ulgoth's Beard}
+\begin{trivlist}
+\item Hurgan's Soultaker  \label{hurgan} %\pageref{soultaker}
+\item Shandalar's Quest \textcolor{Mahogany}{R-7}
+\item Mendas' Quest
+\item Therella's son, Dalton  \label{therella} %\pageref{dalton}
+\item Ike's Tours  \label{ike} %\pageref{dtower}
+\item Galken's Runestone  \label{galken} %\pageref{dtower}
+\item Delsvirftanyon's Liquidation Sale  \label{sale} %\pageref{tower}
+%\item Fenrus
+%~\item Dushai (after Mendas)
+\item Ring of Free Action
+\end{trivlist}
+
+\paragraph*{Durlag's Tower}
+\begin{trivlist}
+\item Tome of Understanding [3rd]
+\item Ike's Tours pt 2 [0th]  \label{dtower} %\pageref{ike} \pageref{galken} \pageref{sale}
+\item Rigglio and Kirinsale [3rd, 4th]
+\item Ghost [3rd]
+\item Hurgan's Soultaker pt 2 [B6]  \label{soultaker} %\pageref{hurgan}
+\item Therella's son, Dalton pt 2 [B6]  \label{dalton} %\pageref{therella}
+\end{trivlist}
+
+\paragraph*{Werewolf Island, Village}
+\begin{trivlist}
+\item Solianna
+\item Kaishas' Quest
+\item Maralee's Baby  \label{maralee} %\pageref{peldan}
+\item Jorin
+\item Farthing's Doll  \label{farthing} %\pageref{dolly}
+\item Evalt's Brother  \label{evalt} %\pageref{evan}
+\item Lahl
+\item Durlyle's/Delainy's task
+\item Taloun
+\end{trivlist}
+
+\paragraph*{Werewold Island, Wilds}
+\begin{trivlist}
+\item Palin/Farthing's Doll pt 2  \label{dolly} %\pageref{farthing}
+\item Meym, wolfwere
+\item Sirine Queen/Evalt's pt 2  \label{evan} %\pageref{evalt}
+\item Kryla and Jondal, ambush
+\item Dradeel's spellbook  \label{dradeel} %\pageref{spellbook}
+\end{trivlist}
+
+\paragraph*{Werewolf Island, Shipwreck}
+\begin{trivlist}
+\item silver dagger
+\item Karoug
+\item Maralee's Baby pt 2  \label{peldan} %\pageref{maralee}
+\item Dradeel's Spellbook pt 2  \label{spellbook} %\pageref{dradeel}
+\item Balduran's shit
+\end{trivlist}
+
+\paragraph*{Werewolf Island, Escape}
+\begin{trivlist}
+\item Kaishas and the village
+\item Dradeel and the exit
+\item Warrens
+\item Kaishas' Last Stand
+\end{trivlist}
+
+\paragraph*{Ulgoth's Beard Revisited}
+\begin{trivlist}
+%after returning with Soultaker
+\item Cultists attack!
+\item Finish the cultists
+%after returning with balduran's journal
+\item Baresh
+\item Mendas/Selaad
+\end{trivlist}
+
+\paragraph*{Baldur's Gate Revisited}
+\begin{trivlist}
+\item Tamoko pt 1
+\item Delthyr
+\item Husan
+\item Tamoko pt 2
+\item Sorrel
+\item get arrested, Neb (33) (opt)
+\item Flaming Fist, Kent
+\item Harbormaster's House
+\item Iron throne %Dhanial, Pang, Gregor, Tralithan, Kalessia, Wirthing, Cynthandria
+\item Husan, Blushing Maiden
+\item Undercellar: Slythe and Kristin
+\item Ducal Palace
+\end{trivlist}
+
+\paragraph*{Undercity}
+\begin{trivlist}
+\item Voleta Stiletto
+\item Winski Perorate \textcolor{Mahogany}{(R-2)}
+\item Iron Throne Mercenaries
+\item Tamoko
+\item Final Battle: Sarevok!
+\end{trivlist}
+%%%%%%%%%%%%%%%%%%%END OF LINE%%%%%%%%%%%%%%%%%%%%%%%%
+\end{multicols}
+\end{document}
